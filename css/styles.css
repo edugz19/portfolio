@@ -1,0 +1,119 @@
+:root {
+  --primary: #0a192f;
+  --secondary: #54d8bd;
+  --tertiary: #123040;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&display=swap");
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 600px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+header {
+  padding: 20px;
+  margin: 0 30px;
+}
+
+header .logo {
+  width: 40px;
+}
+
+header .navbar-toggler-icon {
+  color: var(--secondary);
+}
+
+header .nav-item {
+  margin: 0px 5px;
+}
+
+header .nav-link {
+  font-size: 0.8em;
+  padding: 10px;
+  color: #fff;
+}
+
+header .nav-link:hover {
+  color: var(--secondary);
+}
+
+#intro {
+  height: 75vh;
+  color: #fff;
+  position: relative;
+}
+
+#intro h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+#intro p {
+  font-size: 0.9em;
+}
+
+#intro .intro-btn {
+  margin-top: 20px;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+}
+
+#intro .intro-btn:hover {
+  background-color: var(--tertiary);
+}
+
+#about {
+  height: 2000px;
+}
+
+@media (max-width: 991px) {
+  header .nav-item {
+    text-align: center;
+  }
+}
+
+@media (min-width: 700px) {
+  #intro h1 {
+    border-right: 0.15em solid var(--secondary);
+    animation: blink 1s steps(1) infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(20) 1s 1 normal both, blink 1s steps(1) infinite;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+    #intro {
+        margin: 0 20px;
+    }
+
+    #intro h1 {
+        text-align: center;
+    }
+
+    #intro p {
+        text-align: center;
+    }
+}
